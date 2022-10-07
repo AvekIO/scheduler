@@ -10,7 +10,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('actions', function (Blueprint $table): void {
-            $table->unsignedInteger('id')->primary();
+            $table->unsignedInteger('id')->autoIncrement();
             $table->unsignedInteger('bot_id')->index();
             $table->string('name', 255);
             $table->text('description')->nullable();

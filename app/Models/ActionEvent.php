@@ -10,5 +10,7 @@ class ActionEvent extends Model
 {
     use HasFactory;
 
+    public const UPDATED_AT = null;
+
     protected $table = 'action_event';
 }

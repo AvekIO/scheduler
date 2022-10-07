@@ -9,4 +9,6 @@ use Illuminate\Database\Eloquent\Model;
 class CompletedTask extends Model
 {
     use HasFactory;
+
+    public const UPDATED_AT = null;
 }

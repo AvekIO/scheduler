@@ -10,7 +10,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('events', function (Blueprint $table): void {
-            $table->unsignedTinyInteger('id')->primary();
+            $table->unsignedTinyInteger('id')->autoIncrement();
             $table->string('name', 255);
             $table->text('description')->nullable();
             $table->timestamp('created_at')->useCurrent();

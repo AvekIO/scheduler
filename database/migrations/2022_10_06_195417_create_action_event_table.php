@@ -9,7 +9,7 @@ return new class extends Migration
 {
     public function up(): void
     {
-        Schema::create('action_events', function (Blueprint $table): void {
+        Schema::create('action_event', function (Blueprint $table): void {
             $table->unsignedInteger('action_id');
             $table->unsignedTinyInteger('event_id');
             $table->timestamp('created_at')->useCurrent();
@@ -22,6 +22,6 @@ return new class extends Migration
 
     public function down(): void
     {
-        Schema::dropIfExists('action_events');
+        Schema::dropIfExists('action_event');
     }
 };
